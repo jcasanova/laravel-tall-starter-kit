@@ -39,6 +39,12 @@ php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServic
 ```
 * Ajout des fichiers au `.gitignore`
 
+### Installation preset TALL
+
+```shell
+composer require livewire/livewire laravel-frontend-presets/tall
+```
+* diverses corrections, suppression sass et sass-loader
 
 ## Divers
 
@@ -58,6 +64,12 @@ location = /public/favicon.ico { access_log off; log_not_found off; }
 location = /public/robots.txt  { access_log off; log_not_found off; }
 ```
 
+## Post-installation
+
+* supprimer le preset tall
+```shell
+composer remove laravel-frontend-presets/tall
+```
 
 ## Configuration PhpStorm
 
