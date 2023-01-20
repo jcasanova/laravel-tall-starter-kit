@@ -48,6 +48,35 @@ composer require livewire/livewire laravel-frontend-presets/tall
 
 ## Divers
 
+### Correction config Vite avec environnement sécurisé TLS
+
+À partir du moment où on sécurise le projet (valet secure) le serveur de dev généré par vite nécessite d'utiliser l'hôte (host).
+En compilant un article sur freek.dev, la doc laravel-vite et ce gist (récupération dynamique du host), on obtient le fichier vite.config.js :
+```js
+import { defineConfig, loadEnv } from 'vite'
+import laravel from 'laravel-vite-plugin'
+
+export default defineConfig(({ mode}) => {
+    // Load current .env-file
+    const env = loadEnv(mode, process.cwd(), '')
+    // Set the host based on APP_URL
+    // noinspection JSUnresolvedVariable
+    let host = new URL(env.APP_URL).host
+    return {
+        plugins: [
+            laravel({
+                input: [
+                    'resources/css/app.css',
+                    'resources/js/app.js'
+                ],
+                refresh: true,
+                valetTls: host
+            }),
+        ]
+    }
+})
+```
+
 ### Favicon
 
 La config Nginx de valet pose toujours souci cf [ce ticket](https://github.com/laravel/valet/issues/375#issuecomment-1347146695).
