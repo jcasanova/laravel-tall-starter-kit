@@ -3,11 +3,11 @@
 ## À propos de ce kit de démarrage
 
 L'objectif est d'avoir une base de code pour démarrer un projet Laravel incluant :
-- [ ] La dernière version à jour (Laravel 9)
-- [ ] L'extension **[laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**
+- [x] La dernière version à jour (Laravel 9)
+- [x] L'extension **[laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**
 - [ ] L'extension **[laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)**
 - [ ] La gestion de l'authentification et la mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire)
-- [ ] Favicon
+- [x] Favicon
 
 Ainsi que la configuration de base de l'IDE PhpStorm.
 
@@ -15,9 +15,18 @@ Ainsi que la configuration de base de l'IDE PhpStorm.
 
 ### Création du projet
 
-````bash
+````shell
 laravel new laravel-tall-starter_kit --git
 ````
+### Installation debugbar
+
+```shell
+composer require --dev barryvdh/laravel-debugbar
+```
+
+* Puis chargement de la home pour ajout automatique du .gitignore
+* Ajout de la variable `DEBUGBAR_ENABLED=true` au fichier `.env`.
+
 
 ## Divers
 
