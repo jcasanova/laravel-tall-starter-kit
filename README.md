@@ -6,7 +6,7 @@ L'objectif est d'avoir une base de code pour démarrer un projet Laravel incluan
 - [x] La dernière version à jour (Laravel 9)
 - [x] L'extension **[laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**
 - [x] L'extension **[laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)**
-- [ ] La gestion de l'authentification et la mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire)
+- [ ] Mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire) avec gestion authentification
 - [x] Favicon
 
 Ainsi que la configuration de base de l'IDE PhpStorm.
