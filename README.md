@@ -5,7 +5,7 @@
 L'objectif est d'avoir une base de code pour démarrer un projet Laravel incluant :
 - [x] La dernière version à jour (Laravel 9)
 - [x] L'extension **[laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**
-- [ ] L'extension **[laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)**
+- [x] L'extension **[laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)**
 - [ ] La gestion de l'authentification et la mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire)
 - [x] Favicon
 
@@ -26,6 +26,18 @@ composer require --dev barryvdh/laravel-debugbar
 
 * Puis chargement de la home pour ajout automatique du .gitignore
 * Ajout de la variable `DEBUGBAR_ENABLED=true` au fichier `.env`.
+
+### Installation ide-helper
+
+```shell
+composer require --dev barryvdh/laravel-ide-helper
+```
+
+* Puis publication du fichier de config `config/ide-helper.php` et configuration de diverses options.
+```shell
+php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+```
+* Ajout des fichiers au `.gitignore`
 
 
 ## Divers
