@@ -6,7 +6,7 @@ L'objectif est d'avoir une base de code pour démarrer un projet Laravel incluan
 - [x] La dernière version à jour (Laravel 9)
 - [x] L'extension **[laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**
 - [x] L'extension **[laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)**
-- [ ] Mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire) avec gestion authentification
+- [x] Mise en place de la stack TALL (Tailwind CSS, AlpineJS, Livewire) avec gestion authentification
 - [x] Favicon
 
 Ainsi que la configuration de base de l'IDE PhpStorm.
@@ -16,7 +16,7 @@ Ainsi que la configuration de base de l'IDE PhpStorm.
 ### Création du projet
 
 ````shell
-laravel new laravel-tall-starter_kit --git
+laravel new laravel-tall-starter-kit --git
 ````
 ### Installation debugbar
 
@@ -51,7 +51,8 @@ composer require livewire/livewire laravel-frontend-presets/tall
 ### Correction config Vite avec environnement sécurisé TLS
 
 À partir du moment où on sécurise le projet (valet secure) le serveur de dev généré par vite nécessite d'utiliser l'hôte (host).
-En compilant un article sur freek.dev, la doc laravel-vite et ce gist (récupération dynamique du host), on obtient le fichier vite.config.js :
+En compilant la doc [laravel/vite](https://laravel.com/docs/9.x/vite#working-with-a-secure-development-server)
+et [ce gist](https://gist.github.com/mpociot/1c2cfcdf90ca2175011ebeb60d4a0d54) (récupération dynamique du host), on obtient le fichier vite.config.js :
 ```js
 import { defineConfig, loadEnv } from 'vite'
 import laravel from 'laravel-vite-plugin'
